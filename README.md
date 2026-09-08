@@ -1,4 +1,4 @@
-# Pixel & Code — Site vitrine + backend
+# thomas & Code — Site vitrine + backend
 
 ## 📋 Présentation
 - Objectif du site :
