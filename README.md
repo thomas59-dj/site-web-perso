@@ -88,7 +88,3 @@ Vérifie que le serveur tourne et si le SMTP est configuré.
 ![appropos](test/pro.png)
 ![service](test/SER.png)
 ![contact](test/hy.png)
-
-## 📄 Licence / Auteur
-- Auteur :
-- Licence :
