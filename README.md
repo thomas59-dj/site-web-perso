@@ -84,10 +84,10 @@ Vérifie que le serveur tourne et si le SMTP est configuré.
 - Points d'attention : monter `backend/data/` sur un volume persistant si la sauvegarde locale est utilisée
 
 ## resultat
-[acceuil](test/acc.png)
-[appropos](test/pro.png)
-[service](test/SER.png)
-[contact](test/hy.png)
+![acceuil](test/acc.png)
+![appropos](test/pro.png)
+![service](test/SER.png)
+![contact](test/hy.png)
 
 ## 📄 Licence / Auteur
 - Auteur :
