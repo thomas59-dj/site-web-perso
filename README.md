@@ -83,10 +83,11 @@ Vérifie que le serveur tourne et si le SMTP est configuré.
 - Variables d'environnement à définir en production :
 - Points d'attention : monter `backend/data/` sur un volume persistant si la sauvegarde locale est utilisée
 
-## 📌 Roadmap / à faire
-- [ ]
-- [ ]
-- [ ]
+## resultat
+[acceuil](test/acc.png)
+[appropos](test/pro.png)
+[service](test/SER.png)
+[contact](test/hy.png)
 
 ## 📄 Licence / Auteur
 - Auteur :
