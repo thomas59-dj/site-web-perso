@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Thomas &amp; Code — Console de services</title>
+<meta name="description" content="Développement web, jeux vidéo, débogage et audit de code. Console de services — sélectionnez une rubrique dans le menu.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="app">
+
+  <!-- ============ SIDEBAR ============ -->
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-brand">
+      <span class="brand-mark"><img src="test/icon.png" class="avatar"></span>
+      <span class="brand-name">THOMAS<span class="dim">&amp;</span>CODE</span>
+    </div>
+
+    <nav class="sidebar-nav" aria-label="Navigation principale">
+      <button class="nav-item active" data-page="dashboard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6A2.25 2.25 0 016 3.75h2.25A2.25 2.25 0 0110.5 6v2.25a2.25 2.25 0 01-2.25 2.25H6a2.25 2.25 0 01-2.25-2.25V6zM3.75 15.75A2.25 2.25 0 016 13.5h2.25a2.25 2.25 0 012.25 2.25V18a2.25 2.25 0 01-2.25 2.25H6A2.25 2.25 0 013.75 18v-2.25zM13.5 6a2.25 2.25 0 012.25-2.25H18A2.25 2.25 0 0120.25 6v2.25A2.25 2.25 0 0118 10.5h-2.25a2.25 2.25 0 01-2.25-2.25V6zM13.5 15.75a2.25 2.25 0 012.25-2.25H18a2.25 2.25 0 012.25 2.25V18A2.25 2.25 0 0118 20.25h-2.25A2.25 2.25 0 0113.5 18v-2.25z" /></svg>
+        <span>Accueil</span>
+      </button>
+      <button class="nav-item" data-page="apropos">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z" /></svg>
+        <span>À propos</span>
+      </button>
+      <button class="nav-item" data-page="services">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5" /></svg>
+        <span>Services</span>
+      </button>
+      <button class="nav-item" data-page="methode">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.75h-.152c-3.196 0-6.1-1.248-8.25-3.286z" /></svg>
+        <span>Méthode</span>
+      </button>
+      <button class="nav-item" data-page="stack">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" /></svg>
+        <span>Stack technique</span>
+      </button>
+      <button class="nav-item" data-page="projet">
+       <svg viewBox="0 0 24 24" width="48" height="48" xmlns="http://www.w3.org/2000/svg">  <path d="M4 20h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.93a2 2 0 0 1-1.66-.9l-.82-1.2A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2z" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /><polyline points="9 13 11 15 15 11" fill="none" stroke="#16a34a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" /></svg> 
+        <span>Projets</span>
+      </button>
+   
+      <button class="nav-item" data-page="contact">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+        <span>Contact</span>
+      </button>
+      <img src="logo.png">
+      </nav>
+    <div class="sidebar-footer">
+
+      <span class="status-dot"></span>
+      <span>Disponible pour nouveaux projets</span>
+    </div>
+  </aside>
+
+  <div class="sidebar-overlay" id="sidebar-overlay"></div>
+
+  <!-- ============ CONTENU ============ -->
+  <div class="app-main">
+
+    <header class="topbar">
+      <div class="topbar-left">
+        <button class="burger" id="burger-btn" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="sidebar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </button>
+        <h1 class="topbar-title" id="page-title">ACCUEIL</h1>
+      </div>
+      <div class="topbar-right">
+        <a href="#" class="icon-btn" data-page="contact" aria-label="Notifications">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" /></svg>
+          <span class="icon-dot"></span>
+        </a>
+        
+      </div>
+    </header>
+
+    <main class="page-container">
+      <!-- ===== PAGE : ACCUEIL ===== -->
+      <section class="page active" id="page-dashboard" aria-labelledby="page-title">
+        <div class="page-grid">
+          <div class="panel panel-hero">
+            <p class="tag">// session active</p>
+            <h2 class="hero-heading">Des solutions informatiques sur-mesure, <span class="accent">du premier commit au dernier boss.</span></h2>
+            <p class="hero-text">Sites web, applications sur-mesure et jeux vidéo — conçus, codés et débogués avec rigueur. Un seul interlocuteur, du cahier des charges à la mise en production.</p>
+            <div class="hero-actions">
+              <button class="btn btn-primary" data-page="services">Découvrir mes services</button>
+              <button class="btn btn-outline" data-page="contact">Discuter d'un projet</button>
+            </div>
+          </div>
+
+          <div class="panel panel-terminal">
+            <div class="terminal-topbar">
+              <span class="dot dot-red"></span><span class="dot dot-yellow"></span><span class="dot dot-green"></span>
+              <span class="terminal-path">Igr DJONWE Thomas</span>
+            </div>
+            <div class="terminal-body">
+              <div><span class="prompt"><div class="avatar">info</div></span> DJONWE thomas</div>
+              <div class="terminal-output">&gt; développeur full-stack &amp; game dev</div>
+              <div><span class="prompt">$</span> status --check</div>
+              <div class="terminal-output"><span class="status-ok">●</span> en ligne — devis sous 24h</div>
+              <div><span class="prompt">$</span> contact --start</div>
+             <div class="terminal-output"><span class="status-ok"></span><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />thoms5960@gmail.com<br>+237 699680950</div>
+              <div class="terminal-output">&gt; en attente de votre message<span class="caret"></span></div>
+            </div>
+          </div>
+
+          <div class="stat-row">
+            <div class="panel stat-card">
+              <span class="stat-value">C · C++ · C#</span>
+              <span class="stat-label">langages bas-niveau</span>
+            </div>
+            <div class="panel stat-card">
+              <span class="stat-value">Web · Unity</span>
+              <span class="stat-label">terrains de jeu</span>
+            </div>
+            <div class="panel stat-card">
+              <span class="stat-value">24h</span>
+              <span class="stat-label">délai de réponse</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+       <!-- ===== PAGE : STACK ===== -->
+      <section class="page" id="pages-stack" aria-labelledby="page-title">
+        <p class="tag">// stack</p>
+        <h2 class="section-heading">Technologies maîtrisées</h2>
+
+        <div class="panel stack-panel">
+          <div class="chip-grid">
+            <span class="chip chip-accent">C</span>
+            <span class="chip">C++</span>
+            <span class="chip chip-accent">C#</span>
+            <span class="chip chip-accent">Unity</span>
+            <span class="chip chip-accent">HTML5</span>
+            <span class="chip chip-accent">CSS3</span>
+            <span class="chip chip-accent">JavaScript</span>
+            <span class="chip chip-accent">React</span>
+            <span class="chip">Python</span>
+            <span class="chip chip-accent">Linux</span>
+            <span class="chip chip-accent">Git</span>
+            <span class="chip">SQL</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PAGE : À PROPOS ===== -->
+      <section class="page" id="page-apropos" aria-labelledby="page-title">
+        <div class="panel panel-wide">
+          <p class="tag">// profil</p>
+          <h2 class="section-heading">Un profil hybride, entre logique système et créativité ludique.</h2>
+          <p class="body-text">
+            Je conçois des solutions informatiques à la croisée de deux mondes : le développement web,
+            où la clarté et la performance priment, et le développement de jeux vidéo, où la rigueur
+            technique doit servir l'expérience et le plaisir de jeu.
+          </p>
+          <p class="body-text">
+            Cette double expertise me permet d'aborder chaque projet — qu'il s'agisse d'un site vitrine,
+            d'une application métier ou d'un prototype de jeu — avec la même exigence : un code propre,
+            des architectures pensées pour durer, et une communication directe à chaque étape.
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== PAGE : SERVICES ===== -->
+      <section class="page" id="page-services" aria-labelledby="page-title">
+        <p class="tag">// catalogue</p>
+        <h2 class="section-heading">Quatre domaines d'intervention</h2>
+
+        <div class="cards-grid">
+          <article class="panel service-card">
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" /></svg></div>
+            <p class="service-tag">service.web</p>
+            <h3 class="service-title">Développement Web</h3>
+            <p class="service-desc">Sites et applications rapides, responsives, pensées pour convertir.</p>
+            <ul class="service-list">
+              <li>Sites vitrines &amp; landing pages</li>
+              <li>Applications web sur-mesure</li>
+              <li>E-commerce &amp; paiement en ligne</li>
+              <li>Intégration responsive &amp; performance</li>
+            </ul>
+          </article>
+
+          <article class="panel service-card">
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M6 12h.008M9.75 9.75h.008M6.75 15h.008M17 10.5l1.5 1.5m0 0l1.5 1.5m-1.5-1.5l1.5-1.5m-1.5 1.5L17 13.5M3 8.25A2.25 2.25 0 015.25 6h13.5A2.25 2.25 0 0121 8.25v7.5A2.25 2.25 0 0118.75 18H5.25A2.25 2.25 0 013 15.75v-7.5z" /></svg></div>
+            <p class="service-tag">service.jeu-vidéo</p>
+            <h3 class="service-title">Développement de Jeux Vidéo</h3>
+            <p class="service-desc">Du prototype jouable au build optimisé, en 2D comme en 3D.</p>
+            <ul class="service-list">
+              <li>Physique &amp; gameplay (Unity)</li>
+              <li>IA &amp; comportement des bots</li>
+              <li>Prototypage de mécaniques de jeu</li>
+              <li>Optimisation des performances</li>
+            </ul>
+          </article>
+
+          <article class="panel service-card">
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 9.75l4.5 4.5m0-4.5l-4.5 4.5M12 21a9 9 0 100-18 9 9 0 000 18z" /></svg></div>
+            <p class="service-tag">service.debug</p>
+            <h3 class="service-title">Maintenance &amp; Résolution de Bugs</h3>
+            <p class="service-desc">J'identifie la cause d'un dysfonctionnement et je la corrige durablement.</p>
+            <ul class="service-list">
+              <li>Débogage C / C++ / C# / Web</li>
+              <li>Refactorisation &amp; code propre</li>
+              <li>Sécurisation &amp; mises à jour</li>
+              <li>Optimisation des performances</li>
+            </ul>
+          </article>
+
+          <article class="panel service-card">
+            <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.75h-.152c-3.196 0-6.1-1.248-8.25-3.286z" /></svg></div>
+            <p class="service-tag">service.audit</p>
+            <h3 class="service-title">Services Informatiques &amp; Audit</h3>
+            <p class="service-desc">Un regard technique extérieur pour sécuriser vos choix.</p>
+            <ul class="service-list">
+              <li>Conseil technique personnalisé</li>
+              <li>Configuration d'environnements</li>
+              <li>Audit de code</li>
+              <li>Assistance technique sur-mesure</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+      
+      <!-- ===== PAGE : CONTACT ===== -->
+   <section class="page" id="page-contact" aria-labelledby="page-title">
+        <p class="tag">// nouvelle demande</p>
+        <h2 class="section-heading">Configurer votre demande</h2>
+
+        <form id="contact-form" novalidate>
+          <div class="panel dashed-panel">
+            <p class="step-label">1. Vos coordonnées</p>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="name">Nom</label>
+                <input id="name" name="name" type="text" required placeholder="Votre nom">
+              </div>
+              <div class="form-field">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" required placeholder="vous@exemple.com">
+              </div>
+            </div>
+          </div>
+
+          <div class="panel solid-panel">
+            <p class="step-label">2. Configurer le projet</p>
+            <div class="form-row">
+              <div class="form-field">
+                <label for="project-type">Type de projet</label>
+                <select id="project-type" name="project-type" required>
+                  <option value="" disabled selected>Sélectionnez une option</option>
+                  <option value="web">Développement web</option>
+                  <option value="jeu">Jeu vidéo</option>
+                  <option value="debug">Maintenance / débogage</option>
+                  <option value="audit">Conseil / audit</option>
+                  <option value="autre">Autre</option>
+                </select>
+              </div>
+              <div class="form-field">
+                <label for="detail-level">Niveau de détail du brief</label>
+                <div class="range-wrap">
+                  <input id="detail-level" name="detail-level" type="range" min="0" max="100" value="50">
+                  <div class="range-labels"><span>Concis</span><span>Détaillé</span></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" required rows="4" placeholder="Décrivez votre projet en quelques lignes…"></textarea>
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary btn-block">Envoyer la demande</button>
+          <p id="form-status" class="form-status hidden"></p>
+        </form>
+
+        <div class="contact-links">
+          <a href="mailto:thoms5960@gmail.com" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+            thoms5960@gmail.com
+          </a>
+          <a href="#" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.94 3.2 9.13 7.65 10.6.56.1.76-.24.76-.54v-1.9c-3.11.68-3.77-1.5-3.77-1.5-.51-1.3-1.24-1.65-1.24-1.65-1.02-.7.08-.68.08-.68 1.12.08 1.72 1.15 1.72 1.15 1 1.72 2.62 1.22 3.26.93.1-.73.39-1.22.71-1.5-2.48-.28-5.1-1.24-5.1-5.53 0-1.22.44-2.22 1.15-3-.11-.28-.5-1.42.11-2.96 0 0 .94-.3 3.08 1.15a10.6 10.6 0 015.6 0c2.13-1.45 3.07-1.15 3.07-1.15.62 1.54.23 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.3-2.63 5.24-5.13 5.52.4.35.76 1.03.76 2.08v3.08c0 .3.2.65.77.54A11.03 11.03 0 0023 11.52C23 5.24 18.27.5 12 .5z"/></svg>
+            github.com/pixelandcode
+          </a>
+          <a href="#" class="contact-link">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.03-1.85-3.03-1.85 0-2.14 1.45-2.14 2.94v5.66H9.36V9h3.41v1.56h.05c.47-.9 1.63-1.85 3.36-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+            linkedin.com/in/pixelandcode
+          </a>
+        </div>
+      </section>
+
+      <!-- ===== PAGE : MÉTHODE ===== -->
+      <section class="page" id="page-methode" aria-labelledby="page-title">
+        <p class="tag">// méthode</p>
+        <h2 class="section-heading">Pourquoi me faire confiance</h2>
+
+        <div class="method-grid">
+          <div class="panel method-card">
+            <p class="method-index">01</p>
+            <h3 class="method-title">Code propre &amp; documenté</h3>
+            <p class="method-desc">Un code lisible, commenté et maintenable — pas seulement fonctionnel.</p>
+          </div>
+          <div class="panel method-card">
+            <p class="method-index">02</p>
+            <h3 class="method-title">Réactivité &amp; débogage rapide</h3>
+            <p class="method-desc">Un bug bloquant est traité en priorité, avec un retour rapide et clair.</p>
+          </div>
+          <div class="panel method-card">
+            <p class="method-index">03</p>
+            <h3 class="method-title">Approche sur-mesure</h3>
+            <p class="method-desc">Aucune solution générique : chaque projet part de vos besoins réels.</p>
+          </div>
+          <div class="panel method-card">
+            <p class="method-index">04</p>
+            <h3 class="method-title">Respect des délais</h3>
+            <p class="method-desc">Un planning clair, communiqué en amont, et tenu jusqu'à la livraison.</p>
+          </div>
+        </div>
+      </section>
+
+     
+     
+        <!-- ===== PAGE : PROJETS  ===== -->
+      <section class="page" id="page-projet" aria-labelledby="page-title">
+        <p class="tag">// Des projets finaliser</p>
+        plusieurs projets ont  été finalisé pour des clients
+          <img  class="image" src="test/banque.png"> <a href="http://localhost:3000">cliquer pour voir</a></img></br>
+          <img  class="image" src="test/client.png"> <a href="http://localhost:3000/client">cliquer pour voir</a></img>
+      </section>
+  
+
+      
+
+    </main>
+
+    <footer class="app-footer">
+      <span>© 2026 thomas &amp; Code</span>
+      <p>Conçu &amp; codé  par djonwe thomas</p>
+      <span class="dim">Mentions légales · Confidentialité</span>
+    </footer>
+  </div>
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
